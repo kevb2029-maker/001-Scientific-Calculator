@@ -9,7 +9,7 @@
 
     body {
       min-height: 100vh;
-      background: #F5F0E8;
+      background: #0D0D14;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -17,9 +17,9 @@
     }
 
     .calculator {
-      background: #EDE8DC;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.1);
+      background: #1A1A28;
+      border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
       padding: 24px;
       width: 380px;
       user-select: none;
@@ -27,8 +27,8 @@
 
     /* Display */
     .display {
-      background: #E8E0D0;
-      border-radius: 12px;
+      background: #111119;
+      border-radius: 16px;
       padding: 16px 20px 12px;
       margin-bottom: 18px;
       min-height: 100px;
@@ -36,12 +36,12 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
-      border: 1px solid rgba(139,69,19,0.15);
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .display-history {
       font-size: 13px;
-      color: #555555;
+      color: #4A4A6A;
       min-height: 20px;
       word-break: break-all;
       text-align: right;
@@ -50,7 +50,7 @@
 
     .display-expr {
       font-size: 18px;
-      color: #555555;
+      color: #7070A0;
       min-height: 24px;
       word-break: break-all;
       text-align: right;
@@ -60,7 +60,7 @@
     .display-main {
       font-size: 36px;
       font-weight: 600;
-      color: #000000;
+      color: #FFFFFF;
       word-break: break-all;
       text-align: right;
       line-height: 1.1;
@@ -80,9 +80,9 @@
       flex: 1;
       padding: 6px 0;
       border-radius: 8px;
-      border: 1.5px solid #A09070;
+      border: 1.5px solid rgba(255,255,255,0.1);
       background: transparent;
-      color: #555555;
+      color: #6060A0;
       font-size: 12px;
       font-weight: 600;
       cursor: pointer;
@@ -91,8 +91,8 @@
     }
 
     .mode-btn.active {
-      background: #8B4513;
-      border-color: #8B4513;
+      background: #6366F1;
+      border-color: #6366F1;
       color: #fff;
     }
 
@@ -114,85 +114,68 @@
     button {
       padding: 0;
       height: 52px;
-      border-radius: 10px;
+      border-radius: 12px;
       border: none;
       font-size: 15px;
       font-weight: 500;
       cursor: pointer;
-      transition: transform 0.08s, box-shadow 0.08s, background 0.1s;
+      transition: transform 0.08s, filter 0.1s, background 0.1s;
       outline: none;
-      color: #000000;
+      color: #FFFFFF;
     }
 
-    button:active { transform: scale(0.94); }
+    button:active { transform: scale(0.93); }
+    button:hover { filter: brightness(1.15); }
 
     /* Button types */
     .btn-sci {
-      background: #E8E0D0;
+      background: #22223A;
       font-size: 13px;
-      color: #555555;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      color: #9090C0;
     }
-
-    .btn-sci:hover { background: #DDD5C4; }
 
     .btn-num {
-      background: #F5F0E8;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #2A2A42;
+      color: #FFFFFF;
     }
-
-    .btn-num:hover { background: #EDE8DC; }
 
     .btn-op {
-      background: #A09070;
-      color: #000000;
+      background: #6366F1;
+      color: #FFFFFF;
       font-size: 18px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.12);
     }
-
-    .btn-op:hover { background: #8E7E60; }
 
     .btn-accent {
-      background: #8B4513;
+      background: #8B5CF6;
       color: #fff;
-      box-shadow: 0 2px 6px rgba(139,69,19,0.3);
     }
-
-    .btn-accent:hover { background: #7A3B10; }
 
     .btn-clear {
-      background: #c0392b;
+      background: #EF4444;
       color: #fff;
-      box-shadow: 0 2px 6px rgba(192,57,43,0.3);
     }
-
-    .btn-clear:hover { background: #a93226; }
 
     .btn-equals {
-      background: #5A7A3A;
+      background: #6366F1;
       color: #fff;
       font-size: 22px;
-      box-shadow: 0 2px 6px rgba(90,122,58,0.3);
+      box-shadow: 0 4px 20px rgba(99,102,241,0.4);
     }
-
-    .btn-equals:hover { background: #4a6830; }
 
     .btn-mem {
-      background: #EDE8DC;
-      color: #8B4513;
+      background: #1E1E32;
+      color: #8B5CF6;
       font-size: 12px;
       font-weight: 700;
-      border: 1.5px solid rgba(139,69,19,0.25);
+      border: 1.5px solid rgba(139,92,246,0.25);
     }
-
-    .btn-mem:hover { background: #DDD5C4; }
 
     .span2 { grid-column: span 2; }
 
     /* Memory bar */
     .mem-bar {
       font-size: 11px;
-      color: #8B4513;
+      color: #8B5CF6;
       text-align: right;
       margin-bottom: 6px;
       min-height: 14px;
@@ -201,7 +184,7 @@
 
     @media (max-width: 420px) {
       .calculator { width: 100vw; border-radius: 0; padding: 16px; }
-      button { height: 46px; font-size: 13px; }
+      button { height: 46px; font-size: 13px; border-radius: 10px; }
     }
   </style>
 </head>
